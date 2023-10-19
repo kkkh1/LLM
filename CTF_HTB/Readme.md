@@ -12,6 +12,6 @@
 # Python 
 
 #### ソート
-- [sort()](https://atmarkit.itmedia.co.jp/ait/articles/2012/22/news022.html)
+- [sort()関数解説サイト](https://atmarkit.itmedia.co.jp/ait/articles/2012/22/news022.html)
 #### オンラインコードコンパイラIDEONE
 - [IDEONE](https://ideone.com/)
