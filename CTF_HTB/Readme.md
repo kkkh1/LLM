@@ -10,5 +10,5 @@
 # 画像解析
 - http://exif-check.org/
 # Python 
-###　ソート
+### ソート
 - [sort()](https://atmarkit.itmedia.co.jp/ait/articles/2012/22/news022.html)
