@@ -350,7 +350,7 @@ llm_load_tensors: offloading 32 repeating layers to GPU
 llm_load_tensors: offloading non-repeating layers to GPU
 llm_load_tensors: offloaded 35/35 layers to GPU
 llm_load_tensors: VRAM used: 3545.33 MB
-...................................................................................................
+...................................................................................................##ここが4分くらいかかる
 llama_new_context_with_model: n_ctx      = 2048
 llama_new_context_with_model: freq_base  = 10000.0
 llama_new_context_with_model: freq_scale = 1
