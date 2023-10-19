@@ -1,0 +1,48 @@
+キーボード設定をJPに変更
+VirtualBOXのネットワーク設定を、１がホストオンリー、２がNAT
+
+sudo vi /etc/network/interfaces
+
+#The primary netmask interfaces
+allow-hotplug eth0
+iface eth0 inet static
+adress 10.0.0.2
+netmask 255.255.255.0
+
+#The secondary network interface
+allow-hotplug eth1
+iface eth1 inet dhcp
+
+sudo apt update
+sudo apt upgrade
+sudo apt update -y
+sudo apt install linux-headers-$(uname -r)
+
+GuestAddition挿入し、DesktopにVboxを作成し中身をコピー
+cd Desktop/vbox
+chmod +x VBoxLinuxAdditions.run
+sh ./ VBoxLinuxAdditions.run
+rm -rf vbox
+再起動する
+Errorの場合以下は、VirtualBoxの共有フォルダーにShareを設定していなかった
+└─$ sudo ls -la  /media
+total 12
+drwxr-xr-x   3 root root 4096 Oct 10 11:38 .
+drwxr-xr-x  18 root root 4096 Oct 10 11:24 ..
+drwxr-x---+  2 root root 4096 Oct 10 11:39 kali
+設定後以下
+└─$ sudo ls -la  /media
+total 12
+drwxr-xr-x   4 root root   4096 Oct 10 11:49 .
+drwxr-xr-x  18 root root   4096 Oct 10 11:24 ..
+drwxr-x---+  2 root root   4096 Oct 10 11:39 kali
+drwxrwx---   1 root vboxsf    0 Oct 10 11:07 sf_share
+
+sudo mount -t vboxsf share ./Desktop/share
+完了
+
+
+
+
+
+
